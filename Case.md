@@ -3,16 +3,24 @@ Bellabeat Case
 Mustafa Yazar
 11/14/2021
 
--   [ASK](#ask)
--   [PREPARE](#prepare)
+-   [Ask](#ask)
+    -   [Company Information](#company-information)
+    -   [Product Information](#product-information)
+    -   [Key Stakeholders](#key-stakeholders)
+    -   [Identifying the Problem](#identifying-the-problem)
+    -   [Business Task](#business-task)
+    -   [Guiding Questions](#guiding-questions)
+-   [Prepare](#prepare)
     -   [Information About Data](#information-about-data)
--   [PROCESS](#process)
--   [ANALYZE AND VISUALIZE](#analyze-and-visualize)
-    -   [INSIGHTS](#insights)
+    -   [Loading Packages](#loading-packages)
+    -   [Importing Data](#importing-data)
+-   [Process](#process)
+-   [Analyze and Visualize](#analyze-and-visualize)
+    -   [Insights](#insights)
 
-# ASK
+# Ask
 
-### Company Information
+## Company Information
 
 Bellabeat is the go-to wellness brand for women with an ecosystem of
 products and services focused on women’s health. According to company’s
@@ -20,7 +28,7 @@ site “They develop wearables and accompanying products that monitor
 biometric and lifestyle data to help women better understand how their
 bodies work and make healthier choices.”
 
-### Product Information
+## Product Information
 
 -   Bellabeat app: The Bellabeat app provides users with health data
     related to their activity, sleep, stress, menstrual cycle, and
@@ -42,20 +50,20 @@ bodies work and make healthier choices.”
     throughout the day. The Spring bottle connects to the Bellabeat app
     to track your hydration levels. I chose to work on the Time product.
 
-### Key Stakeholders
+## Key Stakeholders
 
 -   Urška Sršen: Bellabeat’s cofounder and Chief Creative Officer
 
 -   Sando Mur: Mathematician and Bellabeat’s cofounder; key member of
     the Bellabeat executive team
 
-### Identifying the Problem
+## Identifying the Problem
 
 Bellabeat has grown rapidly in the last few years. Stakeholders wants to
 learn about new growth opportunities and they need information about the
 customer usage trends for a new marketing strategy.
 
-### Business Task
+## Business Task
 
 Focus on one of the Bellabeat’s products and analyze smart device data
 to gain insights into how consumers are using their smart devices.Make
@@ -63,13 +71,13 @@ recommendations for how these trends can inform the company marketing
 strategy. Use the data to discover more growth opportunities for the
 company.
 
-### Guiding Questions
+## Guiding Questions
 
 1.  What are some trends in smart device usage?
 2.  How could these trends apply to Bellabeat customers?
 3.  How could these trends help influence Bellabeat marketing strategy?
 
-# PREPARE
+# Prepare
 
 ## Information About Data
 
@@ -83,14 +91,14 @@ and sleep monitoring. You can find the data
 
 Let’s start to prepare the data for analysis.
 
-### Loading Packages
+## Loading Packages
 
 ``` r
 library(tidyverse)
 library(lubridate)
 ```
 
-### Importing Data
+## Importing Data
 
 ``` r
 daily_activity <- read_csv("dailyActivity_merged.csv",show_col_types = FALSE)
@@ -159,7 +167,7 @@ colnames(heartrate)
 
     ## [1] "Id"    "Time"  "Value"
 
-# PROCESS
+# Process
 
 We will also look at each data to see how many distinct user it
 contains.
@@ -316,7 +324,7 @@ sorted_data <- merged_data %>%
   rename(ActivityDate = Date)
 ```
 
-# ANALYZE AND VISUALIZE
+# Analyze and Visualize
 
 Let’s explore our data. We will start with summarizing the data.
 
@@ -533,7 +541,7 @@ User_data %>%
 -   We could not find any meaningful relationship here, either. Time to
     fall asleep is mostly independent from these two variables.
 
-## INSIGHTS
+## Insights
 
 -   A good amount of users have some trouble with sleep. Some of them is
     spending a lot of in time trying to sleep, some of them are having
